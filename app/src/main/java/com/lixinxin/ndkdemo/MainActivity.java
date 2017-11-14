@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(getNameFromJNI("lixinxin"));
+        tv.setText(getNameFromJNI("lixinxin", "20"));
     }
 
     /**
@@ -27,5 +27,5 @@ public class MainActivity extends AppCompatActivity {
      */
     public native String stringFromJNI();
 
-    public native String getNameFromJNI(String name);  //传值给C++
+    public native String getNameFromJNI(String name, String age);  //传值给C++
 }
