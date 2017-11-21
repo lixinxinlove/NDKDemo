@@ -9,6 +9,14 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+
+        ndk {
+            moduleName "NDKDemo"
+            ldLibs "log", "z", "m"
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
